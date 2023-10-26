@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:purserapp/core/widgets/app_bar.dart';
+import 'package:purserapp/core/widgets/app_scaffold.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,8 +7,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBar('Home'),
-    );
+    return AppScaffold(title: 'Home');
   }
 }
