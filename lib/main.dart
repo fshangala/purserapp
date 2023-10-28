@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:purserapp/home/home.dart';
+import 'package:purserapp/users/login.dart';
+import 'package:purserapp/users/register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,12 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Purser',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
+        LoginScreen.routeName: (context) => const LoginScreen(),
+        RegisterScreen.routeName: (context) => const RegisterScreen(),
       },
       initialRoute: '/',
     );
