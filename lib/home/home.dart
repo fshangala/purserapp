@@ -23,6 +23,11 @@ class _HomeScreenState extends AuthState<HomeScreen> {
               children: [
                 ListTile(
                   leading: const Icon(Icons.person),
+                  subtitle: Row(children:[
+                    Container(padding: EdgeInsets.all(8),child:ElevatedButton(onPressed:(){},child:Text('Deposit'))),
+                    Container(padding: EdgeInsets.all(8),child:ElevatedButton(onPressed:(){},child:Text('Withdraw'))),
+                    Container(padding: EdgeInsets.all(8),child:ElevatedButton(onPressed:(){},child:Text('Send')))
+                  ]),
                   title: Text(user.username),
                 ),
                 UserTransactions(user: user)

@@ -15,6 +15,11 @@ class UserTransactions extends StatefulWidget {
 class _UserTransactions extends State<UserTransactions> {
   Future<List<Transaction>> transactionsFuture = Future.value([]);
   @override
+  initState() {
+    super.initState();
+    getTransactions();
+  }
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [

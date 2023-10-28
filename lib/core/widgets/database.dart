@@ -63,6 +63,31 @@ abstract class Database {
   Future<List<Map<String, dynamic>>> getItems(
       String collection, Map<String, dynamic> query) async {
     List<Map<String, dynamic>> items = [];
+    if(collection == 'transactions') {
+      return [
+        {
+          'id':'1',
+          'userId':'1',
+          'amount':100.0,
+          'description':'deposit',
+          'approved':true,
+        },
+        {
+          'id':'1',
+          'userId':'1',
+          'amount':150.0,
+          'description':'deposit',
+          'approved':true,
+        },
+        {
+          'id':'1',
+          'userId':'1',
+          'amount':-200.0,
+          'description':'withdraw',
+          'approved':true,
+        }
+      ];
+    }
     var allItems = await getAll(collection);
     if (query.isEmpty) {
       items = allItems;
