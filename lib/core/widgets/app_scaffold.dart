@@ -9,13 +9,12 @@ class AppScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Container(
-        padding: const EdgeInsets.all(16),
-        child: Column(children: children),
-      ),
-    );
+        appBar: AppBar(
+          title: Text(title),
+        ),
+        body: Container(
+          padding: const EdgeInsets.all(16),
+          child: Column(children: children),
+        ));
   }
 }
