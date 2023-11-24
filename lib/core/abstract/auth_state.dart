@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:purserapp/core/datatypes/user.dart';
 import 'package:purserapp/core/functions/go_to.dart';
 import 'package:purserapp/core/widgets/null_future_renderer.dart';
 import 'package:purserapp/users/login.dart';
+import 'package:purserapp/users/models/user.dart';
 
 abstract class AuthState<T extends StatefulWidget> extends State<T> {
   late Future<User?> userFuture;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:purserapp/core/datatypes/user.dart';
 import 'package:purserapp/core/functions/go_to.dart';
+import 'package:purserapp/users/models/user.dart';
 import 'package:purserapp/users/register.dart';
 
 class LoginForm extends StatefulWidget {

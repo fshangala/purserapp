@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:purserapp/core/datatypes/model.dart';
-import 'package:purserapp/core/datatypes/user.dart';
 import 'package:purserapp/users/login.dart';
+import 'package:purserapp/users/models/user.dart';
 
 class RegisterForm extends StatefulWidget {
   final String? userId;

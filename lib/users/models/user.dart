@@ -1,3 +1,4 @@
+import 'package:purserapp/chat/models/chat_session.dart';
 import 'package:purserapp/core/datatypes/model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -87,5 +88,10 @@ class User extends Model<User, UserModelArguments> {
   Future<bool> logout() async {
     var instance = await SharedPreferences.getInstance();
     return await instance.remove('loggedInUser');
+  }
+
+  Future<List<ChatSession>> chats() async {
+    var chats = ChatSession().getObjects(QueryBuilder().where('userId', id));
+    return chats;
   }
 }

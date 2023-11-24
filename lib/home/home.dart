@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:purserapp/chat/widgets/user_chats.dart';
 import 'package:purserapp/core/abstract/auth_state.dart';
 import 'package:purserapp/core/widgets/tabbed_app_scaffold.dart';
-import 'package:purserapp/core/widgets/user_transactions.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,7 +22,7 @@ class _HomeScreenState extends AuthState<HomeScreen> {
           title: 'Home',
           tabs: const [
             Tab(
-              icon: Icon(Icons.info),
+              icon: Icon(Icons.message),
             ),
             Tab(
               icon: Icon(Icons.flag),
@@ -37,13 +37,6 @@ class _HomeScreenState extends AuthState<HomeScreen> {
               padding: const EdgeInsets.all(16),
               child: renderCurrentUser((user) => Column(
                     children: [
-                      const Row(
-                        children: [
-                          Text('Bonus: 0.0'),
-                          Text('Invested: 0.0'),
-                          Text('Balance: 0.0'),
-                        ],
-                      ),
                       ListTile(
                         leading: const Icon(Icons.person),
                         subtitle: Row(children: [
@@ -64,7 +57,9 @@ class _HomeScreenState extends AuthState<HomeScreen> {
                         ]),
                         title: Text(user.username),
                       ),
-                      UserTransactions(user: user)
+                      ListView(
+                        children: [UserChats(user: user)],
+                      )
                     ],
                   )),
             ),

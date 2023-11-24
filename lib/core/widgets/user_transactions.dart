@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:purserapp/core/datatypes/model.dart';
 import 'package:purserapp/core/datatypes/transaction.dart';
-import 'package:purserapp/core/datatypes/user.dart';
 import 'package:purserapp/core/widgets/not_null_future_renderer.dart';
+import 'package:purserapp/users/models/user.dart';
 
 class UserTransactions extends StatefulWidget {
   final User user;
@@ -19,6 +19,7 @@ class _UserTransactions extends State<UserTransactions> {
     super.initState();
     getTransactions();
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
